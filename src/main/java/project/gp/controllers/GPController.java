@@ -90,7 +90,7 @@ public class GPController {
     public List<GP> getGPWithLeastCurrentCapacityBy_Borough(@PathVariable String borough, @RequestParam(required = false) String primaryGP) throws Exception {
 
         log.info("Received request to retrieve GP with least current capacity with borough = ");
-        List<GP> GPList = gpService.getGPWithLeastCurrentCapacityByBorough(borough);
+        List<GP> GPList = gpService.getGPWithLeastCurrentCapacityByBorough(borough, primaryGP);
 
         return GPList;
     }

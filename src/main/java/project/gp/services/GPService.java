@@ -83,9 +83,9 @@ public class GPService {
     }
 
     //Retrieve GP by Borough
-    public List<GP> getGPWithLeastCurrentCapacityByBorough(String borough) {
+    public List<GP> getGPWithLeastCurrentCapacityByBorough(String borough, String primaryGP) {
     
-        List<GP> GPList = GPRepository.findFirstByBoroughOrderByCurrentcapacity(borough);
+        List<GP> GPList = GPRepository.findFirstByBoroughAndNameNotLikeOrderByCurrentcapacity(borough, primaryGP);
         return GPList;
     }
     

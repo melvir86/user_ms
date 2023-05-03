@@ -16,10 +16,7 @@ public interface GPRepository extends MongoRepository<GP, String> {
     List<GP> findByBorough(String borough);
 
     // Find MIN Value
-    List<GP> findFirstByBoroughOrderByCurrentcapacity(String borough);
-    
-    // Find Second MIN Value
-    List<GP> findSecondByBoroughOrderByCurrentcapacity(String borough);
+    List<GP> findFirstByBoroughAndNameNotLikeOrderByCurrentcapacity(String borough, String primaryGP);
 
     //findByStatusCodeNot(String statusCode);
     //findFirstOrderByCounter
