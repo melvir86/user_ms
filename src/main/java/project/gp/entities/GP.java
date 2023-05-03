@@ -27,8 +27,8 @@ public class GP {
     private String address;
     private String borough;
     private String telephone;
-    private String maxcapacity;
-    private String currentcapacity;
+    private int maxcapacity;
+    private int currentcapacity;
     private String status;
     private String admin;
     @LastModifiedDate

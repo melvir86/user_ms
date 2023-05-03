@@ -77,6 +77,24 @@ public class GPController {
         return GPList;
     }
 
+    @GetMapping(value = "/GPs/borough/{borough}")
+    public List<GP> getGPBy_Borough(@PathVariable String borough) throws Exception {
+
+        log.info("Received request to retrieve GP with borough = ");
+        List<GP> GPList = gpService.getGPByBorough(borough);
+
+        return GPList;
+    }
+
+    @GetMapping(value = "/GPs/borough/recommended/{borough}")
+    public List<GP> getGPWithLeastCurrentCapacityBy_Borough(@PathVariable String borough, @RequestParam(required = false) String primaryGP) throws Exception {
+
+        log.info("Received request to retrieve GP with least current capacity with borough = ");
+        List<GP> GPList = gpService.getGPWithLeastCurrentCapacityByBorough(borough);
+
+        return GPList;
+    }
+
     /*
     @GetMapping(value = "/GPs/user")
     public List<GP> getGPByUser(@RequestParam(required = false) String user) throws Exception {

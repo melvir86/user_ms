@@ -13,7 +13,16 @@ public interface GPRepository extends MongoRepository<GP, String> {
     List<GP> findBy_id(ObjectId _id);
 
     List<GP> findByAdmin(String admin);
+    List<GP> findByBorough(String borough);
 
+    // Find MIN Value
+    List<GP> findFirstByBoroughOrderByCurrentcapacity(String borough);
+    
+    // Find Second MIN Value
+    List<GP> findSecondByBoroughOrderByCurrentcapacity(String borough);
+
+    //findByStatusCodeNot(String statusCode);
+    //findFirstOrderByCounter
     //List<Person> findByNameAndNickname(String name, String nickname);
 
     //@Query("{'address.state' : ?0}")

@@ -75,6 +75,20 @@ public class GPService {
         return GPList;
     }
 
+    //Retrieve GP by Borough
+    public List<GP> getGPByBorough(String borough) {
+    
+        List<GP> GPList = GPRepository.findByBorough(borough);
+        return GPList;
+    }
+
+    //Retrieve GP by Borough
+    public List<GP> getGPWithLeastCurrentCapacityByBorough(String borough) {
+    
+        List<GP> GPList = GPRepository.findFirstByBoroughOrderByCurrentcapacity(borough);
+        return GPList;
+    }
+    
     //Retrieve GP that contains a keyword
     public List<GP> getGPByNameContains(String keyword) {
 
