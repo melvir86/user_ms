@@ -6,10 +6,10 @@ import org.springframework.data.mongodb.config.EnableMongoAuditing;
 
 @EnableMongoAuditing
 @SpringBootApplication
-public class FeedbackApplication {
+public class GPApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FeedbackApplication.class, args);
+		SpringApplication.run(GPApplication.class, args);
 	}
 
 }

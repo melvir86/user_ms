@@ -18,22 +18,22 @@ import javax.persistence.Column;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "feedback")
-public class Feedback {
+@Document(collection = "gp")
+public class GP {
 
     @Id
     private ObjectId _id;
-    private String user;
-    @CreatedDate
-    @Column(updatable = false)
-    public LocalDateTime createdDate;
+    private String name;
+    private String address;
+    private String borough;
+    private String telephone;
+    private String maxcapacity;
+    private String currentcapacity;
+    private String status;
+    private String admin;
     @LastModifiedDate
     public LocalDateTime lastModifiedDate;
     //private Date createdDate = new Date();
-    private String type;
-    private String feedback;
-    private String status;
-    //private List<Address> address;
 
     // ObjectId needs to be converted to string
     public String get_id() { return _id.toHexString(); }
