@@ -39,7 +39,7 @@ public class GPService {
         return GPRepository.save(GP);
      }
 
-    //Updares an existing GP
+    //Updates an existing GP
     public GP updateGP(String id, GP GP) {
         GP existGP = getGP(id);
         existGP.setName(GP.getName());
@@ -51,6 +51,14 @@ public class GPService {
         existGP.setStatus(GP.getStatus());
         existGP.setAdmin(GP.getAdmin());
         existGP.setLastModifiedDate(GP.getLastModifiedDate());
+        GPRepository.save(existGP);
+        return existGP;
+    }
+
+    //Updates only the current capacity of an existing GP
+    public GP updateGPCurrentCapacity(String id, GP GP) {
+        GP existGP = getGP(id);
+        existGP.setCurrentcapacity(GP.getCurrentcapacity());
         GPRepository.save(existGP);
         return existGP;
     }

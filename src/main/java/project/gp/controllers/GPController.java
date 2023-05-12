@@ -55,6 +55,16 @@ public class GPController {
         }
     }
 
+    @PutMapping("/GPs/currentcapacity/{id}")
+    public ResponseEntity<GP> updateGPCurrentCapacity(@RequestBody GP GP, @PathVariable String id) {
+        try {
+            GP updatedGP = gpService.updateGPCurrentCapacity(id, GP);
+            return new ResponseEntity<GP>(updatedGP, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<GP>(HttpStatus.NOT_FOUND);
+        }
+    }
+
     /* 
     @DeleteMapping("/GPs/{id}")
     public ResponseEntity<String> deleteGP(@PathVariable String id) {
