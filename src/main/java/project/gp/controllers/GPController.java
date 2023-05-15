@@ -87,6 +87,15 @@ public class GPController {
         return GPList;
     }
 
+    @GetMapping(value = "/GPs/name/{name}")
+    public List<GP> getGPBy_Name(@PathVariable String name) throws Exception {
+
+        //log.info("Received request to retrieve GP with name = ");
+        List<GP> GPList = gpService.getGPByName(name);
+
+        return GPList;
+    }
+
     @GetMapping(value = "/GPs/borough/{borough}")
     public List<GP> getGPBy_Borough(@PathVariable String borough) throws Exception {
 

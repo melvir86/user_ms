@@ -12,6 +12,8 @@ public interface GPRepository extends MongoRepository<GP, String> {
 
     List<GP> findBy_id(ObjectId _id);
 
+    List<GP> findByName(String name);
+
     List<GP> findByAdmin(String admin);
     List<GP> findByBorough(String borough);
 

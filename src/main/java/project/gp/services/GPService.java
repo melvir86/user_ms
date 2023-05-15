@@ -83,6 +83,13 @@ public class GPService {
         return GPList;
     }
 
+    //Retrieve GP by Admin
+    public List<GP> getGPByName(String name) {
+    
+        List<GP> GPList = GPRepository.findByName(name);
+        return GPList;
+    }
+
     //Retrieve GP by Borough
     public List<GP> getGPByBorough(String borough) {
     
