@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>project</groupId>
-	<artifactId>gp</artifactId>
+	<artifactId>user</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>gp-ms</name>
+	<name>user-ms</name>
 	<description>Sample project to provide testing boilerplate code for Spring Boot</description>
 
 	<properties>

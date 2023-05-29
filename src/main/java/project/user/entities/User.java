@@ -1,4 +1,4 @@
-package project.gp.entities;
+package project.user.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,22 +18,14 @@ import javax.persistence.Column;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "gp")
-public class GP {
+@Document(collection = "user")
+public class User {
 
     @Id
     private ObjectId _id;
-    private String name;
-    private String address;
-    private String borough;
-    private String telephone;
-    private int maxcapacity;
-    private int currentcapacity;
-    private String status;
-    private String admin;
-    @LastModifiedDate
-    public LocalDateTime lastModifiedDate;
-    //private Date createdDate = new Date();
+    private String username;
+    private String password;
+    private String role;
 
     // ObjectId needs to be converted to string
     public String get_id() { return _id.toHexString(); }
