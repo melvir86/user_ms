@@ -28,7 +28,7 @@ public class UserController {
 
     @GetMapping("/Users")
     public List<User> getUsers(@RequestParam(required = false) String type) throws Exception {
-
+        
         log.info("Received request to retrieve all User or User by type : " + type);
 
         return UserService.getAllUsers();
