@@ -21,6 +21,7 @@ import javax.persistence.Column;
 @Document(collection = "user")
 public class User {
 
+    //User object to hold information pertaining to User
     @Id
     private ObjectId _id;
     private String username;
